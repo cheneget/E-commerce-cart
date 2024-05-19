@@ -1,0 +1,215 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: beige;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  margin: 20px;
+}
+
+#logo img {
+  max-width: 100px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-top: 10px;
+  color: #4CAF50;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+#intro {
+  text-align: center;
+  margin: 20px;
+  font-size: 1em;
+}
+
+#product-list, #cart {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+#cart-title {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: #FF6347;
+  font-weight: bold;
+}
+
+.product, .cart-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+}
+
+.product img, .cart-item img {
+  max-width: 100%;
+}
+
+button {
+  margin-top: 10px;
+  padding: 5px;
+}
+
+input[type="number"] {
+  width: 50px;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+#cart-summary {
+  text-align: center;
+  margin: 20px;
+}
+
+#discount-code {
+  margin-top: 10px;
+  padding: 5px;
+  width: 200px;
+}
+
+#cart-summary button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#cart-summary button:hover {
+  background-color: #45a049;
+}
+
+.cart-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}
+#payment-info {
+  text-align: center;
+  margin: 20px;
+}
+
+#payment-info h2 {
+  color: #FF6347;
+}
+
+#payment-image {
+  max-width: 100px; /* Reduced size for the payment image */
+  margin-top: 20px;
+}
+
+#additional-payment-methods {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#additional-payment-methods button {
+  display: flex;
+  align-items: center;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+#additional-payment-methods button img {
+  max-width: 50px;
+  margin-right: 10px;
+}
+
+#additional-payment-methods button:hover {
+  background-color: #e0e0e0;
+}
+
+#delivery-address {
+  text-align: center;
+  margin: 20px;
+}
+
+#address-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#address-form label {
+  margin: 5px 0;
+}
+
+#address-form input {
+  margin: 5px 0;
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+}
+
+#address-form button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#address-form button:hover {
+  background-color: #45a049;
+}
+
+#confirmation-message {
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #FFEB3B;
+  color: #000;
+  border: 2px solid #FF9800;
+  border-radius: 10px;
+  font-size: 1.2em;
+}
+@media (max-width: 600px) {
+  h1 {
+      font-size: 2em;
+  }
+
+  #product-list, #cart {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .product, .cart-item {
+      width: 100%;
+      max-width: 300px;
+  }
+
+  input[type="number"] {
+      width: 80px;
+  }
+
+  #payment-image {
+      max-width: 80px;
+  }
+
+  #additional-payment-methods button img {
+      max-width: 30px; 
+  }
+
+  #address-form input {
+      width: 100%;
+      max-width: 250px;
+  }
+}

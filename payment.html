@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function showConfirmationMessage(event) {
+            event.preventDefault();
+            const message = document.getElementById('confirmation-message');
+            message.style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="images/download.png" alt="Business Logo">
+        </div>
+        <h1>Payment Page</h1>
+    </header>
+    <div id="payment-info">
+        <p>Thank you for your purchase!</p>
+        <p>Please make your payment to the following till number:</p>
+        <h2>Till Number: 8 7 1 1 7 0 8</h2>
+        <img src="images/PaulNdegeTill.png" alt="Payment Methods" id="payment-image">
+        <h3>Or choose one of the following payment methods:</h3>
+        <div id="additional-payment-methods">
+            <button onclick="window.location.href='https://www.paypal.com/ncp/payment/NH67XFMT4GLQE'">
+                <img src="images/paypal.png" alt="PayPal"> Pay with PayPal
+            </button>
+            <button onclick="alert('Credit Card payment processing is not yet implemented.')">
+                <img src="images/creditcard.jpeg" alt="Credit Card"> Pay with Credit Card
+            </button>
+            <button onclick="alert('Bank Transfer payment processing is not yet implemented.')">
+                <img src="images/banktransfer.png" alt="Bank Transfer"> Pay with Bank Transfer
+            </button>
+        </div>
+    </div>
+    <div id="delivery-address">
+        <h3>Enter Delivery Address</h3>
+        <form id="address-form" onsubmit="showConfirmationMessage(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="street">Street Address:</label>
+            <input type="text" id="street" name="street" required>
+            
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+            
+            <label for="state">State/Province:</label>
+            <input type="text" id="state" name="state" required>
+            
+            <label for="zip">ZIP/Postal Code:</label>
+            <input type="text" id="zip" name="zip" required>
+            
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" required>
+            
+            <button type="submit">Confirm Address</button>
+        </form>
+        <div id="confirmation-message" style="display: none;">
+            <p>Your item will be delivered once the payment is reviewed. Thank you!</p>
+        </div>
+    </div>
+</body>
+</html>

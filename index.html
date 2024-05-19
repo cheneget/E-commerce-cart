@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="images/download.png" alt="Business Logo">
+        </div>
+        <h1>Ndege Investment<br>Dealer in African Art and sculptures</h1>
+    </header>
+    <div id="intro">
+        <p><b>Welcome to our online store! Feel free to browse <br>and add items to your cart.</b></p>
+    </div>
+    <div id="product-list"></div>
+    <div id="cart-title">Here are the items in your cart</div>
+    <div id="cart"></div>
+    <div id="cart-summary">
+        <input type="text" id="discount-code" placeholder="Enter discount code eg, SAVE20">
+        <button onclick="applyDiscount()">Apply Discount</button>
+        <h2>Total: Ksh <span id="total-amount">0</span></h2>
+        <button onclick="checkout()">Checkout</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
